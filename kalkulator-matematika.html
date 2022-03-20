@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kubus</title>
+</head>
+<body>
+    <h1>Kalkulator Rumus Kubus</h1>
+    <label>Rusuk (Sisi)</label>
+    <input type="number" class="rusuk-kubus">
+
+    <br>
+    <br>
+
+    <button class="luas-kubus">Luas</button>
+    <button class="keliling-kubus">Keliling</button>
+    <button class="volume-kubus">Volume</button>
+
+    <p class="hasil"></p>
+
+    <script>
+        // ELement input angka
+        const elementRusukKubus = document.querySelector(".rusuk-kubus");
+
+        // ELement button
+        const elementLuasKubus = document.querySelector(".luas-kubus");
+        const elementKelilingKubus = document.querySelector(".keliling-kubus");
+        const elementVolumeKubus = document.querySelector(".volume-kubus");
+
+        // Element hasil
+        const elementHasil = document.querySelector(".hasil");
+
+        elementLuasKubus.addEventListener("click", function() {
+            const nilaiRusukKubus = Number(elementRusukKubus.value);
+
+            const hasil = 6 * nilaiRusukKubus;
+            elementHasil.textContent = `Luas kubusnya adalah = ${hasil}`;
+        });
+        elementKelilingKubus.addEventListener("click", function() {
+            const nilaiRusukKubus = Number(elementRusukKubus.value);
+
+            const hasil = 12 * nilaiRusukKubus;
+            elementHasil.textContent = `Keliling kubusnya adalah = ${hasil}`;
+        });
+        elementVolumeKubus.addEventListener("click", function() {
+            const nilaiRusukKubus = Number(elementRusukKubus.value);
+
+            const hasil = nilaiRusukKubus ** 3;
+            elementHasil.textContent = `Volume kubusnya adalah = ${hasil}`;
+        });
+    </script>
+</body>
+</html>
